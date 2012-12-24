@@ -1,0 +1,13 @@
+/web/bundles/
+/web/uploads/
+/web/media/
+/web/cgi-bin/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/app/config/parameters.yml
+/app/deploy/
+/vendor/
+/.idea
+/composer.lock
+/*.sql

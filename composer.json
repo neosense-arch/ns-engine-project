@@ -1,0 +1,86 @@
+{
+    "name": "symfony/framework-standard-edition",
+    "description": "The \"Symfony Standard Edition\" distribution",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php":                             ">=5.3.3",
+        "symfony/symfony":                 "2.1.*",
+        "doctrine/orm":                    ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle":        "1.0.*",
+        "twig/extensions":                 "1.0.*",
+        "symfony/assetic-bundle":          "2.1.*",
+        "symfony/swiftmailer-bundle":      "2.1.*",
+        "symfony/monolog-bundle":          "2.1.*",
+        "sensio/distribution-bundle":      "2.1.*",
+        "sensio/framework-extra-bundle":   "2.1.*",
+        "sensio/generator-bundle":         "2.1.*",
+        "jms/security-extra-bundle":       "1.2.*",
+        "jms/di-extra-bundle":             "1.1.*",
+
+		"friendsofsymfony/user-bundle":    "dev-master",
+		"mopa/bootstrap-bundle":           "dev-master",
+		"knplabs/knp-menu-bundle":         "dev-master",
+		"knplabs/knp-paginator-bundle":    "dev-master",
+		"craue/formflow-bundle":           "dev-master",
+		"stof/doctrine-extensions-bundle": "dev-master",
+		"avalanche123/imagine-bundle":     "dev-master",
+
+		"twitter/bootstrap":               "dev-master",
+
+		"neosense/admin-bundle":           "1.0.*",
+		"neosense/deploy-bundle":          "1.0.*",
+		"neosense/news-bundle":            "1.0.*",
+		"neosense/pages-bundle":           "1.0.*",
+		"neosense/properties-bundle":      "1.0.*",
+		"neosense/user-bundle":            "1.0.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+			"Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+			"Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
+        ]
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "public_html"
+    },
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nsadminbundle.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nsdeploybundle.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nsnewsbundle.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nspagesbundle.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nspropertiesbundle.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nsuserbundle.git"
+		}
+	]
+}
