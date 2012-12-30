@@ -30,7 +30,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: true
-    bundles:        [ NSAdminBundle, MopaBootstrapBundle, APFrontBundle ]
+    bundles:        [ NSAdminBundle, MopaBootstrapBundle ]
     read_from:      "%kernel.root_dir%/../public_html"
     write_to:       "%kernel.root_dir%/../public_html"
     filters:
@@ -129,7 +129,7 @@ knp_paginator:
 
 # NS Admin
 ns_admin:
-    bundles: [NSUserBundle, NSPagesBundle, NSNewsBundle, APCatalogueBundle, APOrdersBundle, APSlideBundle, APFileBundle, NSPropertiesBundle]
+    bundles: [NSUserBundle, NSPagesBundle, NSNewsBundle, NSPropertiesBundle]
 
 # NS Properties
 ns_properties:
