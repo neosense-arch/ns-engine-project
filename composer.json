@@ -29,7 +29,8 @@
 
 		"twitter/bootstrap":               "dev-master",
 
-		"neosense/admin-bundle":           "1.0.*",
+		"neosense/admin-bundle":           "1.1.*",
+		"neosense/cms-bundle":             "1.0.*",
 		"neosense/deploy-bundle":          "1.0.*",
 		"neosense/news-bundle":            "1.0.*",
 		"neosense/pages-bundle":           "1.0.*",
@@ -61,6 +62,10 @@
 		{
 			"type": "vcs",
 			"url": "git@bitbucket.org:phpinfo/nsadminbundle.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nscmsbundle.git"
 		},
 		{
 			"type": "vcs",

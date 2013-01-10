@@ -1,3 +1,7 @@
+ns_cms:
+    resource: "@NSCmsBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ns_pages:
     resource: "@NSPagesBundle/Resources/config/routing.yml"
     prefix:   /

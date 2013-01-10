@@ -38,6 +38,7 @@ class AppKernel extends Kernel
 			new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
 			new NS\AdminBundle\NSAdminBundle(),
+			new NS\CmsBundle\NSCmsBundle(),
 			new NS\DeployBundle\NSDeployBundle(),
 			new NS\NewsBundle\NSNewsBundle(),
 			new NS\PagesBundle\NSPagesBundle(),

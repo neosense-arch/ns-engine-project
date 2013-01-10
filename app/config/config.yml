@@ -129,7 +129,7 @@ knp_paginator:
 
 # NS Admin
 ns_admin:
-    bundles: [NSUserBundle, NSPagesBundle, NSNewsBundle, NSPropertiesBundle]
+    bundles: [NSUserBundle, NSNewsBundle, NSPropertiesBundle, NSCmsBundle]
 
 # NS Properties
 ns_properties:
