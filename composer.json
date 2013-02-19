@@ -7,7 +7,7 @@
     "require": {
         "php":                             ">=5.3.3",
         "symfony/symfony":                 "2.1.*",
-        "doctrine/orm":                    ">=2.2.3,<2.4-dev",
+        "doctrine/orm":                    "2.3.*",
         "doctrine/doctrine-bundle":        "1.0.*",
         "twig/extensions":                 "1.0.*",
         "symfony/assetic-bundle":          "2.1.*",
@@ -22,19 +22,22 @@
 		"friendsofsymfony/user-bundle":    "dev-master",
 		"mopa/bootstrap-bundle":           "dev-master",
 		"knplabs/knp-menu-bundle":         "dev-master",
-		"knplabs/knp-paginator-bundle":    "dev-master",
+		"knplabs/knp-paginator-bundle":    "2.3.*",
 		"craue/formflow-bundle":           "dev-master",
 		"stof/doctrine-extensions-bundle": "dev-master",
 		"avalanche123/imagine-bundle":     "dev-master",
+		"excelwebzone/zend-search":        "dev-master",
 
 		"twitter/bootstrap":               "dev-master",
 
 		"neosense/admin-bundle":           "1.1.*",
-		"neosense/cms-bundle":             "1.0.*",
+		"neosense/cms-bundle":             "1.1.*",
 		"neosense/deploy-bundle":          "1.0.*",
-		"neosense/news-bundle":            "1.0.*",
+		"neosense/documents-bundle":       "1.0.*",
+		"neosense/news-bundle":            "1.1.*",
 		"neosense/pages-bundle":           "1.0.*",
 		"neosense/properties-bundle":      "1.0.*",
+		"neosense/search-bundle":          "1.0.*",
 		"neosense/user-bundle":            "1.0.*"
     },
     "scripts": {
@@ -73,6 +76,10 @@
 		},
 		{
 			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nsdocumentsbundle.git"
+		},
+		{
+			"type": "vcs",
 			"url": "git@bitbucket.org:phpinfo/nsnewsbundle.git"
 		},
 		{
@@ -82,6 +89,10 @@
 		{
 			"type": "vcs",
 			"url": "git@bitbucket.org:phpinfo/nspropertiesbundle.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:phpinfo/nssearchbundle.git"
 		},
 		{
 			"type": "vcs",
