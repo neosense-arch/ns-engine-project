@@ -40,15 +40,12 @@ class AppKernel extends Kernel
 			new NS\AdminBundle\NSAdminBundle(),
 			new NS\CmsBundle\NSCmsBundle(),
 			new NS\DeployBundle\NSDeployBundle(),
+			new NS\DocumentsBundle\NSDocumentsBundle(),
 			new NS\NewsBundle\NSNewsBundle(),
 			new NS\PagesBundle\NSPagesBundle(),
 			new NS\PropertiesBundle\NSPropertiesBundle(),
-			new \NS\SearchBundle\NSSearchBundle(),
+			new NS\SearchBundle\NSSearchBundle(),
             new NS\UserBundle\NSUserBundle(),
-
-            new NST\FrontBundle\NSTFrontBundle(),
-            new NST\PartnersBundle\NSTPartnersBundle(),
-            new NS\DocumentsBundle\NSDocumentsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
