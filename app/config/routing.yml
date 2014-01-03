@@ -1,7 +1,3 @@
-bf_front:
-    resource: "@BFFrontBundle/Resources/config/routing.yml"
-    prefix:   /
-
 ns_catalog:
     resource: "@NSCatalogBundle/Resources/config/routing.yml"
     prefix:   /
