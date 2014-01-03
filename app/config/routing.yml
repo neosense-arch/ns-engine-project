@@ -1,10 +1,30 @@
+bf_front:
+    resource: "@BFFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ns_catalog:
+    resource: "@NSCatalogBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ns_cms:
     resource: "@NSCmsBundle/Resources/config/routing.yml"
     prefix:   /
 
-ns_pages:
-    resource: "@NSPagesBundle/Resources/config/routing.yml"
+ns_feedback:
+    resource: "@NSFeedbackBundle/Resources/config/routing.yml"
     prefix:   /
+
+ns_gallery:
+    resource: "@NSGalleryBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ns_shop:
+    resource: "@NSShopBundle/Resources/config/routing.yml"
+    prefix:   /shop
+
+ns_user:
+    resource: "@NSUserBundle/Resources/config/routing.yml"
+    prefix:   /user
 
 ns_admin:
     resource: "@NSAdminBundle/Resources/config/routing.yml"
@@ -17,3 +37,7 @@ fos_user_security:
 _imagine:
     resource: .
     type:     imagine
+
+ns_routing:
+    resource: .
+    type:     ns_routing_resource

@@ -1,102 +1,47 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "neosense/project",
+	"license": "MIT",
+	"type": "project",
+    "description": "The Engine distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
     "require": {
-        "php":                             ">=5.3.3",
-        "symfony/symfony":                 "2.1.*",
-        "doctrine/orm":                    "2.3.*",
-        "doctrine/doctrine-bundle":        "1.0.*",
-        "twig/extensions":                 "1.0.*",
-        "symfony/assetic-bundle":          "2.1.*",
-        "symfony/swiftmailer-bundle":      "2.1.*",
-        "symfony/monolog-bundle":          "2.1.*",
-        "sensio/distribution-bundle":      "2.1.*",
-        "sensio/framework-extra-bundle":   "2.1.*",
-        "sensio/generator-bundle":         "2.1.*",
-        "jms/security-extra-bundle":       "1.2.*",
-        "jms/di-extra-bundle":             "1.1.*",
-
-		"friendsofsymfony/user-bundle":    "dev-master",
-		"mopa/bootstrap-bundle":           "dev-master",
-		"knplabs/knp-menu-bundle":         "dev-master",
-		"knplabs/knp-paginator-bundle":    "2.3.*",
-		"craue/formflow-bundle":           "dev-master",
-		"stof/doctrine-extensions-bundle": "dev-master",
-		"avalanche123/imagine-bundle":     "dev-master",
-		"excelwebzone/zend-search":        "dev-master",
-
-		"twitter/bootstrap":               "dev-master",
-
-		"neosense/admin-bundle":           "1.1.*",
-		"neosense/cms-bundle":             "1.1.*",
-		"neosense/deploy-bundle":          "1.0.*",
-		"neosense/documents-bundle":       "1.0.*",
-		"neosense/news-bundle":            "1.1.*",
-		"neosense/pages-bundle":           "1.0.*",
-		"neosense/properties-bundle":      "1.0.*",
-		"neosense/search-bundle":          "1.0.*",
-		"neosense/user-bundle":            "1.0.*"
+		"neosense/core-bundle": "1.6.*"
     },
-    "scripts": {
-        "post-install-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-			"Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
-        ],
-        "post-update-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-			"Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
-        ]
-    },
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web"
+        "symfony-web-dir": "web",
+		"incenteev-parameters": {
+			"file": "app/config/parameters.yml"
+		},
+		"branch-alias": {
+			"dev-master": "2.3-dev"
+		}
     },
 	"repositories": [
 		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nsadminbundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nscmsbundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nsdeploybundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nsdocumentsbundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nsnewsbundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nspagesbundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nspropertiesbundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nssearchbundle.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:phpinfo/nsuserbundle.git"
+			"type": "composer",
+			"url": "http://packages.neosense.ru/"
 		}
-	]
+	],
+	"scripts": {
+		"post-install-cmd": [
+			"Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+			"Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
+		],
+		"post-update-cmd": [
+			"Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+			"Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
+		]
+	}
 }
