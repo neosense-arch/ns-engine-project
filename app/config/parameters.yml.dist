@@ -13,10 +13,3 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
-
-    hide_prices:       false
-
-    fb_app_id:         ~
-    fb_secret:         ~
-
-    emails:            []
