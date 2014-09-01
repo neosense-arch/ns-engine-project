@@ -11,6 +11,7 @@
 /ns/app/deploy/
 /ns/app/search/
 /ns/app/spool/
+/ns/app/.installed
 /ns/vendor/
 /.idea
 /*.sql

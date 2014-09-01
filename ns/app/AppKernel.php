@@ -15,6 +15,7 @@ class AppKernel extends CoreKernel
 	protected function getUserBundles()
 	{
 		return array(
+            new \NS\ProjectBundle\NSProjectBundle(),
 		);
 	}
 }
