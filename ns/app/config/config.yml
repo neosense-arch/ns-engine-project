@@ -10,8 +10,8 @@ framework:
 
 # Avalanche Imagine
 avalanche_imagine:
-    source_root:  %kernel.root_dir%/../web
-    web_root:     %kernel.root_dir%/../web
+    source_root:  %kernel.root_dir%/../..
+    web_root:     %kernel.root_dir%/../..
     cache_prefix: upload/cache
     filters:
         ns_admin_image:
