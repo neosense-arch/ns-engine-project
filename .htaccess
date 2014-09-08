@@ -50,3 +50,5 @@ DirectoryIndex app.php
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+
+php_flag magic_quotes_gpc Off
